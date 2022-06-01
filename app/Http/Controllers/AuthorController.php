@@ -69,4 +69,9 @@ class AuthorController extends Controller
      return redirect("/");
  }
 
+ public function relate(Request $request){
+     $items=Author::all();
+     return view("author.index",["items"->$items]);
+ }
+
 }
